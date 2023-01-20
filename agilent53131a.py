@@ -25,6 +25,14 @@ class Agilent53131a():
 
     def get_counts(self):
         "get the counts in counter per second"
-        countrate=self.inst.query(':Calculate:DATA?')
+        countrate=self.inst.query('READ?')
         return countrate
+
+    def set_trigger_level(self, voltage):
+        self.inst.write(':CONF:TOT (@1)')
+        self.inst.write(':EVENT1!:LEVEL '+str(voltage))
+
+
+
+        
 
