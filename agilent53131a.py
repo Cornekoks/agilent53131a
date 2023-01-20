@@ -1,5 +1,7 @@
 import pyvisa
 
+__version__ = '0.0'
+
 class Agilent53131a():
     def __init__(self):
         self.rm = pyvisa.ResourceManager()#for me, it need to name the full path, probably not always necesarry 'C:\Windows\System32\\visa64.dll')
