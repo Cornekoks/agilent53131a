@@ -6,15 +6,18 @@ Tested on windows machine with python 3.10.
 ## requirements
 pyvisa (pip install pyvisa)
 
-## installation
+## installation (not working, can still use if agilent53131a.py is in same folder)
 pip install git+https://github.com/Cornekoks/agilent53131a.git#egg=agilent53131a
 
 ## how to use
 import agilent53131a
+
 ag = agilent53131a.Agilent53131a() #all function are in this class
 
 ag.open_device('GPIB::3') #open the device
+
 frequency = ag.get_counts() #get the measure counts on the display
+
 ag.close_device() #close the device
 
 ## some tips
