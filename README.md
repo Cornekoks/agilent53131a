@@ -14,7 +14,7 @@ import agilent53131a
 
 ag = agilent53131a.Agilent53131a() #all function are in this class
 
-ag.open_device('GPIB::3') #open the device
+ag.open_device('GPIB0::3::INSTR') #open the device
 
 frequency = ag.get_counts() #get the measure counts on the display
 
